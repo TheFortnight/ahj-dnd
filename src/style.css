@@ -1,0 +1,30 @@
+.container {
+    width: 900px;
+    background-color: black;
+    border: 5px solid gold;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+
+}
+
+.column {
+    background-color: pink;
+    border: 5px solid black;
+    width: 33%;
+}
+
+.line {
+    background-color:orange;
+    border: 5px solid green;
+    height: 20px;
+    list-style-type: none;
+}
+
+.line.dragged {
+    border-radius: 10px;
+    position: absolute;
+    z-index: 999;
+    pointer-events: none;
+    background: #fff;
+}
