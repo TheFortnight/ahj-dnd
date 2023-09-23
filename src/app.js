@@ -23,8 +23,15 @@ const onMouseUp = (e) => {
     let mouseUpItem = e.target;
    
    item = mouseUpItem.parentNode;
-    console.log(mouseUpItem);
-    if (mouseUpItem.classList.contains('line')) item.insertBefore(actualElement, mouseUpItem); 
+    console.log('CLASS LIST: '+mouseUpItem.classList);
+    if (mouseUpItem.classList.contains('line')) item.insertBefore(actualElement, mouseUpItem);
+    if (mouseUpItem.classList.contains('column')) {
+        const list = mouseUpItem.querySelector('.list')
+        list.insertBefore(actualElement, list.lastChild);
+    }
+    
+    
+
     e.target.style['margin-top'] = '0px';
     actualElement.classList.remove('dragged');
     actualElement = undefined;

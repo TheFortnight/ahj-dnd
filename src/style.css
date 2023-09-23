@@ -9,6 +9,7 @@
 }
 
 .column {
+    
     background-color: pink;
     border: 5px solid black;
     width: 33%;
@@ -16,7 +17,6 @@
 
 .line {
     display: flex;
-    cursor: grab;
     background-color:orange;
     border: 5px solid green;
     height: 20px;
@@ -28,7 +28,6 @@
     border-radius: 10px;
     position: absolute;
     z-index: 999;
-    pointer-events: none;
     background: #fff;
     width: 240px;
     transform: rotate(-3deg);
@@ -38,15 +37,12 @@
     cursor: pointer;
     position: relative;
     display: inline-block;
-    background-color: #fff;
-    top: 2px;
-    right: -205px;
+    background-image: url('./img/2.jpg');
+    background-size: cover;
+    top: 0px;
+    right: -225px;
     width: 15px;
     height: 15px;    
-}
-
-.closeButton::before {
-    content: ' \E951 ';
 }
 
 .closeButton:hover{
@@ -55,6 +51,8 @@
 
 .addLine {
     display: inline-block;
+    
+    bottom: 0px;
     color: green;
     font-weight: 600;
     margin-left: 15px;
